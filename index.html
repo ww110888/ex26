@@ -8,6 +8,20 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>京东果蔬商城</title>
     <style>
+		#img2{
+			width: 230px;
+			height: 242px;
+			position: absolute;
+			top:500px;
+		    transition:all 5s ease;
+			}
+
+		.show{
+			width: 230px;
+				height: 242px;
+				position: relative;
+			}
+			
         .product_list li {
             width: 21%;
             margin: 2%
@@ -16,13 +30,21 @@
         .product_list li img {
             height: 220px
         }
+
     </style>
 	    <script type="text/javascript">
-	      
-	      function h1(){
-	        document.getElementById("img1").src = "images/a14.jpg";
+			
+			function h1(){
+				document.getElementById("img1").src="images/a14.jpg";
 			}
-	      
+			
+			window.onload=move;
+			function move()
+			{
+				var t=document.getElementById('img2');
+				t.style.top='0';
+			}
+			
 	    </script>
 </head>
 
@@ -129,7 +151,7 @@
                     </div>
                 </li>
                 <li>
-                    <div class="img"><a href="details.html"><img src="images/a9.jpg"></a></div>
+                    <div class="show"><a href="details.html"><img id="img2" src="images/a9.jpg"></a></div>
                     <div class="word">
                         <h3><a href="details.html">烟台黑珍珠樱桃</a></h3>
                         <span>￥118.00</span>
